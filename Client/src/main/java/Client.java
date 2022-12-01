@@ -15,6 +15,10 @@ public class Client extends Thread{
 	ObjectOutputStream out;
 	ObjectInputStream in;
 	
+	GameButton[][] board;
+	int player;
+	boolean isTurn;
+	
 	private Consumer<Serializable> callback;
 	
 	Client(Consumer<Serializable> call){
@@ -51,6 +55,14 @@ public class Client extends Thread{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public void receiveInfo(CFourInfo moveInfo) {
+		
+	}
+	
+	public void sendInfo(CFourInfo moveInfo) {
+		
 	}
 
 

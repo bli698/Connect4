@@ -18,6 +18,23 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 
+/* GUI:
+	1) Your program must start with a welcome screen that is it’s own JavaFX scene.
+		- Welcome screen, with some sort of design/graphic elements
+		- Allow user to pick IP and Port to connect
+	2) Game play screen
+		- Area showing which player's turn it is
+		- Area displaying each move made:
+			- Who made the mode
+			- Where the move was made
+			- Optional: If a valid move. Only if code does not check for valid moves
+		- Area showing the game board
+	3) Game over screen
+		- Message announcing who won, or if it was a tie
+		- Option to play another game (button)
+		- Option to exit the game (button)
+ * 
+ */
 public class ClientGUI extends Application {
 	
 	ListView<String> listItems;

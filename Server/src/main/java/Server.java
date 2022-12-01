@@ -8,9 +8,15 @@ import java.util.function.Consumer;
 
 import javafx.application.Platform;
 import javafx.scene.control.ListView;
-/*
- * Clicker: A: I really get it    B: No idea what you are talking about
- * C: kind of following
+
+
+/* LOGIC:
+- TODO: It will only allow a game to start if there are two clients connected.
+- TODO: It will notify a client if they are the only one connected.
+- TODO: It will keep track of what each player played.
+- TODO: It will notify clients if there is a win or tie after every move.
+- TODO: It will update each client with the other clients move.
+- TODO: It will do all things necessary to run the game. 
  */
 
 public class Server{
@@ -18,6 +24,13 @@ public class Server{
 	int count = 1;	
 	ArrayList<ClientThread> clients = new ArrayList<ClientThread>();
 	TheServer server;
+	CFourInfo moveInfo;
+	boolean fullBoard;
+	int numPlayers;
+	ListView<String> moves; // List of moves made by players
+	int port; // listening port for connections
+	String stateOfGame;
+	
 	private Consumer<Serializable> callback;
 	
 	
@@ -104,6 +117,14 @@ public class Server{
 					}
 				}//end of run
 		}//end of client thread
+		
+		void sendInfo(CFourInfo moveInfo) {
+			
+		}
+		
+		void receiveInfo(CFourInfo moveInfo) {
+			
+		}
 }
 
 

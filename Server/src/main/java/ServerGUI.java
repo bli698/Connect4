@@ -18,6 +18,18 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 
+/* GUI:
+- TODO: A way to chose the port number to listen to
+- TODO: Have a button to turn on the server.
+** BELOW ALL HELD INSIDE ListView<String> moves
+- TODO: Display the state of the game(you can display more info, this is the minimum): 
+- TODO: how many clients are connected to the server.
+- TODO: what each player played.
+- TODO: if someone won the game.
+- TODO: are they playing again.  *Held inside ListView<String> moves
+- Any other GUI elements you feel are necessary for your implementation.
+*/
+
 public class ServerGUI extends Application {
 	
 	Server serverConnection;
