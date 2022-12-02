@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -17,6 +18,9 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
+
+import javafx.fxml.FXMLLoader;
+
 
 /* GUI:
 - TODO: A way to chose the port number to listen to
@@ -46,7 +50,7 @@ public class ServerGUI extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		primaryStage.setTitle("Server");
-		
+		Parent root = FXMLLoader.load(getClass().getResource("/FXML/serverFXML1.fxml"));
 		listItems = new ListView<String>();
 		
 		BorderPane pane = new BorderPane();
@@ -68,7 +72,7 @@ public class ServerGUI extends Application {
             }
         });
 		
-		primaryStage.setScene(new Scene(pane, 500, 400));
+		primaryStage.setScene(new Scene(root, 500, 400));
 		primaryStage.show();
 		
 		
