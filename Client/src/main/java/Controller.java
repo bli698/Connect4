@@ -43,6 +43,7 @@ public class Controller implements Initializable {
     
     ListView<String> listItems;
 	Client clientConnection;
+	GameButton[][] board;
     public Controller() {
     }
 
@@ -62,9 +63,17 @@ public class Controller implements Initializable {
 				.getResource("/FXML/gameScene.fxml"));
 		Parent rootBoard = loader.load();
 		root.getScene().setRoot(rootBoard);
-		
+		clientConnection.gameStart();
+		board = clientConnection.board;
+		for (int row = 0; row < 6; row++) {
+			for (int col = 0; col < 7; col++) {
+				boardGrid.add(board[row][col], row, col);
+			}
+		}
 		
     }
+    
+    
     public void resetGame() throws IOException{
 
     }
