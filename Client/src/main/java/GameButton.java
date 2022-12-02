@@ -5,4 +5,11 @@ public class GameButton extends Button{
 	int player; // 0 = none, 1 = player 1, 2 = player 2, etc.
 	int row;
 	int col;
+	
+	public GameButton(int r, int c) {
+		player = 0;
+		row = r;
+		col = c;
+	}
+	
 }
