@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb053d3-fdcb-4b4e-bc7f-70086e972b11" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/ServerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/ServerGUI.java" afterDir="false" />
-    </list>
+    <list default="true" id="9eb053d3-fdcb-4b4e-bc7f-70086e972b11" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +25,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/socce/Documents/CS 342/Connect4 - Copy/Server",
+    "last_opened_file_path": "C:/Users/socce/Documents/CS 342/Connect4",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
