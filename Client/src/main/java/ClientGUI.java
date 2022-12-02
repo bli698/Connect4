@@ -1,9 +1,11 @@
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -45,23 +47,26 @@ public class ClientGUI extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		primaryStage.setTitle("Client");
+		Parent root = FXMLLoader.load(getClass()
+				.getResource("/FXML/clientFXML1.fxml"));
 		
-		b1 = new Button("Send");
-		b1.setOnAction(e->{clientConnection.send(c1.getText()); c1.clear();});
+//		b1 = new Button("Send");
+//		b1.setOnAction(e->{clientConnection.send(c1.getText()); c1.clear();});
 		
-		c1 = new TextField();
+//		c1 = new TextField();
 		listItems = new ListView<String>();
 		
-		clientBox = new VBox(10, c1, b1, listItems);
-		clientBox.setStyle("-fx-background-color: blue");
+//		clientBox = new VBox(10, c1, b1, listItems);
+//		clientBox.setStyle("-fx-background-color: blue");
 		
-		primaryStage.setScene(new Scene(clientBox, 400, 300));
+		primaryStage.setScene(new Scene(root, 700, 600));
 		
-		clientConnection = new Client(data->{
-			Platform.runLater(()->{listItems.getItems().add(data.toString());
-							});
-			});
-		clientConnection.start();
+//		clientConnection = new Client(data->{
+//			Platform.runLater(()->{listItems.getItems().add(data.toString());
+//							});
+//			});
+//		
+//		clientConnection.start();
 		
 		primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override

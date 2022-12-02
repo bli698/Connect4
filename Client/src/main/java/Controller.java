@@ -1,11 +1,15 @@
 import javafx.fxml.Initializable;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,7 +38,11 @@ public class Controller implements Initializable {
     private Button playAgainButton;
     @FXML
     private Button exitButton;
-
+    @FXML
+    private Button connectButton;
+    
+    ListView<String> listItems;
+	Client clientConnection;
     public Controller() {
     }
 
@@ -42,7 +50,21 @@ public class Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-
+    
+    public void connectToServer() throws IOException{
+    	clientConnection = new Client(data->{
+			Platform.runLater(()->{listItems.getItems().add(data.toString());
+							});
+			});
+		
+		clientConnection.start();
+		FXMLLoader loader = new FXMLLoader(getClass()
+				.getResource("/FXML/gameScene.fxml"));
+		Parent rootBoard = loader.load();
+		root.getScene().setRoot(rootBoard);
+		
+		
+    }
     public void resetGame() throws IOException{
 
     }
